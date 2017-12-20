@@ -1,3 +1,9 @@
+<?php
+session_start();
+if ($_SESSION['logged'] == FALSE){
+        header('Location: cLogin.php');
+}
+?>
 <!DOCTYPE html">
 <html lang="fr">
     <head>
@@ -38,6 +44,7 @@
                             <?php construireMenu("Attribution chambres", "cAttributionChambres.php", 5); ?>
                             <?php construireMenu("Gestion groupes", "cGestionGroupes.php", 6); ?>
                             <?php construireMenu("Représentations", "cRepresentation.php", 7); ?>
+                            <?php construireMenu("Log out", "cLogout.php", 8); ?>
                         </ul>
                     </div>
 
